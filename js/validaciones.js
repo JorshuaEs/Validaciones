@@ -41,6 +41,25 @@ const mensajesDeError = {
         customError: "Debes tener almenos 18 años de edad."
     },
 
+    numero: {
+        valueMissing: "Este campo no puede estar vacio",
+        patternMismatch: "El formato requerido es de xxxxxxxxxx 10 números"
+    },
+
+    direccion: {
+        valueMissing: "Este campo no puede estar vacio",
+        patternMismatch: "La dirección debe contener entre 10 a 40 caracteres."
+    },
+
+    ciudad: {
+        valueMissing: "Este campo no puede estar vacio",
+        patternMismatch: "La ciudad debe contener entre 10 a 40 caracteres."
+    },
+
+    estado: {
+        valueMissing: "Este campo no puede estar vacio",
+        patternMismatch: "El estado debe contener entre 10 a 40 caracteres."
+    },
 }
 
 const validadores = {
@@ -51,9 +70,6 @@ function mostrarMensajeDeError(tipoDeInput, input){
     let mensaje = " ";
     tipoDeErrores.forEach(error =>{
         if(input.validity[error]){
-            console.log(tipoDeInput, error);
-            console.log(input.validity[error]);
-            console.log(mensajesDeError[tipoDeInput][error]);
             mensaje = mensajesDeError[tipoDeInput][error];
         }
     })
