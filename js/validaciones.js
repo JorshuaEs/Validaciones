@@ -32,3 +32,4 @@ function mayorDeEdad(fecha){
     );
     return diferenciaFechas <= fechaActual;
 }
+//creacion de RegExr y acomodar los input y adevenlistener
